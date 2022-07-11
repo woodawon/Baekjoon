@@ -16,3 +16,27 @@ main() {
 		printf("%d", n);
 	else printf("%d", m); 
 }
+
+#include <stdio.h>
+
+main() {
+	int a = 3, b, c = 5, n = 0, m = 0;
+	scanf("%d", &b);
+	
+	while(b > 3){
+		b -= c;
+		if(b < 0)
+			break;
+		n++;
+	}
+	
+	while(n >= 0){
+		n -= a;
+		m++;
+	}
+	
+	if(m % 3 != 0)
+		printf("%d", -1);
+		
+	printf("%d", n + m);
+}
